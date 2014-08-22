@@ -36,12 +36,13 @@ $ ->
   $("#maps").append map.el
   map.load()
 
-  $('#timeSlider').on "input change", (evt) ->
+  onChange = (evt) ->
     hour = Math.floor(evt.target.value/6)
     minute = evt.target.value - hour * 6
     datetime_bucket = hour + minute * 0.1
     $("#time").text "#{hour}:#{minute}0"
     map.setHeatMap datetime_bucket
+  $('#timeSlider').on "input change", _.throttle onChange, 300
 
   $.getJSON "/by_point_hash.json", (evt) ->
     window.data = evt 
