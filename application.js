@@ -91,7 +91,7 @@
       return Map;
 
     })();
-    return $.getJSON("/by_point_hash.json", function(evt) {
+    return $.getJSON("/github-data-challenge/by_point_hash.json", function(evt) {
       var autoplay, shouldAutoplay;
       window.map = new Map;
       $("#maps").append(map.el);
