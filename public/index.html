@@ -4,12 +4,16 @@
     <link rel="stylesheet" href="/application.css">
   </head>
   <body>
-    <h1>Github Data Challenge</h1>
-    <h5 id="time">12:00</h5>
-    <input type="range" id="timeSlider" max=143 value=72>
+    
     <div id="maps">
       
     </div>
+    <header>
+      <h1>Github Pushes by Time and Place</h1>
+      <p>This is a (slightly buggy) visualization of 52 million pushes to Github in the last 2 years.</p>
+      <h5><span id="time">12:00</span></h5>
+      <input type="range" id="timeSlider" max=72 value=0 min=-71>
+    </header>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
@@ -17,6 +21,7 @@
     <script src="//andreruffert.github.io/rangeslider.js/bower_components/rangeslider.js/dist/rangeslider.min.js"></script>
     <script src="//rawgithub.com/joergdietrich/Leaflet.Terminator/master/L.Terminator.js"></script>
     <script src="//leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.1/moment.js"></script>
     <script src="/application.js"></script>
   </body>
 </html>
